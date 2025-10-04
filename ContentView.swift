@@ -1,11 +1,6 @@
 //
 //  ContentView.swift
-//  WeatherAppTutorial
-//
-//  Created by Eymen on 16.07.2023.
-//
-
-// Import necessary frameworks
+//  WeatherApp
 import SwiftUI
 import CoreLocation
 
@@ -55,7 +50,7 @@ struct ContentView: View {
     
     // Fetch weather data for the given location
     private func fetchWeatherData(for location: CLLocation) {
-        let apiKey = "818b9f6b8b9047a866999a814215cbe1"
+        let apiKey = "your own key"
         let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(location.coordinate.latitude)&lon=\(location.coordinate.longitude)&units=metric&appid=\(apiKey)"
         
         guard let url = URL(string: urlString) else { return }
